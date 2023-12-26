@@ -43,7 +43,7 @@ function Game() {
   //Handle player
   const handleClick = (i) => {
     const data = squares.slice();
-    if (calculateWinner(data)) {
+    if (calculateWinner(data) || data[i]) {
       return;
     }
     data[i] = xIsNext ? "X" : "O";
